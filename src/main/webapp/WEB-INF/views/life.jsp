@@ -4,7 +4,7 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>여우동굴 - home</title>
+	<title>여우동굴 - life</title>
 </head>
 <body>
 	<div id="title">
@@ -14,12 +14,15 @@
 		<a href="/board/home.do">홈</a> |
 		<a href="/board/portfolio.do">포트폴리오</a> | 
 		<a href="/board/list.do">게시판</a> |
-		<a href="/board/life.do">일상</a>
+		<a href="/board/life.do">일상</a> 
 		<hr><br>
 	</div>
 	<div id="main">
-		이곳은 여우별이 학습용으로 만든 공간입니다.<br><br>
+		일상 페이지입니다.
+		<br><br>
 	</div>
-	<footer><hr></footer> 
+	<footer>
+		<hr>
+	</footer> 
 </body>
 </html>

@@ -4,7 +4,7 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>여우동굴 - home</title>
+	<title>여우동굴 - list</title>
 </head>
 <body>
 	<div id="title">
@@ -18,7 +18,8 @@
 		<hr><br>
 	</div>
 	<div id="main">
-		이곳은 여우별이 학습용으로 만든 공간입니다.<br><br>
+		게시판 페이지입니다.
+		<br><br>
 	</div>
 	<footer><hr></footer> 
 </body>
