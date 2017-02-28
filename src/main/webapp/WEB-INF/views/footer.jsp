@@ -7,11 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<footer>
+	<div>
 		<hr>
-		<p><a href="http://blog.naver.com/lavender1548">블로그</a></p>
-		<p><a href="https://github.com/yeoubyeol98/Board">깃허브</a></p>
-		<p>이메일 : yeoubyeol98@gmail.com</p>
-	</footer> 
+		<p><img src=img/blog.PNG width="20" height="20" > 블로그 : <a href="http://blog.naver.com/lavender1548">blog.naver.com/lavender1548</a></p>
+		<p><img src=img/github.png width="20" height="20"> 깃허브 : <a href="https://github.com/yeoubyeol98/Board">github.com/yeoubyeol98/Board</a></p>
+		<p><img src=img/email.png width="20" height="20"> 이메일 : <a href="mailto:yeoubyeol98@gmail.com">yeoubyeol98@gmail.com</a></p>
+	</div> 
 </body>
 </html>

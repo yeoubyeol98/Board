@@ -7,15 +7,36 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div id="title">
-		<img src="img/title-img.jpg"><br><br>
+	<style type="text/css">
+		div
+		{
+			margin: 0px 400px 10px 400px;
+		}
+		#mem_info
+		{
+			text-align: right;
+		}
+		#title
+		{
+			text-align: center;
+		}
+		#menu
+		{
+			text-align: left;
+		}
+	</style>
+	<div id="mem_info">
+		<p>내메뉴 여우별(yeoubyeol98)</p>
 	</div>
-	<div id="menu">
+	<div id="title"">
+		<a href="/board/home.do"><img src="img/title-img.jpg"></a>
+	</div>
+	<div id="menu">	
 		<a href="/board/home.do">홈</a> |
 		<a href="/board/portfolio.do">포트폴리오</a> | 
 		<a href="/board/list.do">게시판</a> |
 		<a href="/board/life.do">일상</a>
-		<hr><br>
+		<hr>
 	</div>
 </body>
 </html>

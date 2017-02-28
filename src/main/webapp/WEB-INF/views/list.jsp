@@ -9,8 +9,7 @@
 <body>
 	<jsp:include page="menu.jsp" flush="false"/>
 	<div id="main">
-		게시판 페이지입니다.
-		<br><br>
+		<p>게시판 페이지입니다.</p>
 	</div>
 	<jsp:include page="footer.jsp" flush="false"/>
 </body>

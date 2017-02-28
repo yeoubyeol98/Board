@@ -9,7 +9,7 @@
 <body>
 	<jsp:include page="menu.jsp" flush="false"/>
 	<div id="main">
-		이곳은 여우별이 학습용으로 만든 공간입니다.<br><br>
+		<p>이곳은 여우별이 학습용으로 만든 공간입니다.</p>
 	</div>
 	<jsp:include page="footer.jsp" flush="false"/> 
 </body>
