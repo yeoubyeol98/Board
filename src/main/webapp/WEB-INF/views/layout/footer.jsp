@@ -5,6 +5,14 @@
 <head>
 </head>
 <body>
+	<style type="text/css">
+		#footer
+		{
+			width: 800px;
+  			margin: 0 auto;
+		    min-width: 400px;
+		}
+	</style>
 	<div id="footer">
 		<hr>
 		<p><img src=img/blog.PNG width="20" height="20" > 블로그 : <a href="http://blog.naver.com/lavender1548">blog.naver.com/lavender1548</a></p>

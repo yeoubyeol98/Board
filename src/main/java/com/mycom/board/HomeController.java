@@ -34,12 +34,12 @@ public class HomeController {
 	
 	@RequestMapping(value = "/list.do", method = RequestMethod.GET)
 	public String list(Locale locale, Model model) {
-		return "list";
+		return "/list/list_home";
 	}
 	
-	@RequestMapping(value = "/life.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/shop.do", method = RequestMethod.GET)
 	public String life(Locale locale, Model model) {
-		return "life";
+		return "shop";
 	}
 	
 }

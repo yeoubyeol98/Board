@@ -6,22 +6,20 @@
 </head>
 <body>
 	<style type="text/css">
-		div
+		#menu
 		{
-			margin: 0px 400px 10px 400px;
+			width: 800px;
+  			margin: 0 auto;
+		    min-width: 400px;
 		}
 		#mem_info
 		{
 			text-align: right;
+			padding-right: 10px;
+			padding-left: 10px;
 		}
-		#title
-		{
-			text-align: center;
-		}
-		#menu
-		{
-			text-align: left;
-		}
+		#title{text-align: center;}
+		#menu{text-align: left;}
 	</style>
 	<div id="mem_info">
 		<p>내메뉴 여우별(yeoubyeol98)</p>
@@ -33,7 +31,7 @@
 		<a href="/board/home.do">홈</a> |
 		<a href="/board/portfolio.do">포트폴리오</a> | 
 		<a href="/board/list.do">게시판</a> |
-		<a href="/board/life.do">일상</a>
+		<a href="/board/shop.do">쇼핑몰</a>
 		<hr>
 	</div>
 </body>
