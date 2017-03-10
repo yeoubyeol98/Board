@@ -12,7 +12,7 @@
 	<style type="text/css">
 		#main
 		{
-			width: 800px;
+			width: 1200px;
 			margin: 0 auto;
 		}
 	</style>

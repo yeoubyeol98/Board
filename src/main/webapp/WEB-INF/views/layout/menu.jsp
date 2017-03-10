@@ -8,7 +8,7 @@
 	<style type="text/css">
 		#menu
 		{
-			width: 800px;
+			width: 1200px;
   			margin: 0 auto;
 		    min-width: 400px;
 		}

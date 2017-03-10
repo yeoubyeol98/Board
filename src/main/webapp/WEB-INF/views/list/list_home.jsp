@@ -9,7 +9,42 @@
 	<title>여우동굴 - list</title>
 </head>
 <body>
+	<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<script>
+		$.ajax({
+		    url : "/board/getJsonByMap",
+		    dataType : "json",
+		    type : "get",
+		    success: function(data) {    	
+		    	console.log(data);
+		    	var arr = data.result;
+		    	for(var i in arr){
+		    		$("#listView").append("<tr bgcolor='#dddddd'><td colspan='5'></td></tr>");
+		    		$("#listView").append("<tr>");
+		    		$("#listView").append("<td width=35 style='text-align: right;'>"+arr[i].id+"</td>");
+		    		$("#listView").append("<td style='text-align: left;'><a onclick='moveView("+arr[i].id+")'>"+arr[i].title+"</td>+</a>");
+		    		$("#listView").append("<td style='text-align: left; padding-left: 20px;'>"+arr[i].user_id+"</td>");
+		    		$("#listView").append("<td style='text-align: center;' width=90>"+arr[i].reg_date+"</td>");
+		    		$("#listView").append("<td style='text-align: right;' width=35>"+arr[i].views+"</td>");
+		    		$("#listView").append("</tr>");		    		
+		    	}
+		    	$("#listView").append("<tr bgcolor='#dddddd'><td colspan='5'></td></tr>");
+		    },
+		    error:function(request,status,error){
+		        alert("code:"+request.status+"\n"+"error:"+error);
+		    }
+		});
+		function moveWrite(){
+			location.href="write.do";
+		}
+		function moveView(s){
+			location.href="view.do?id="+s;
+		}
+	</script>
 	<style type="text/css">  
+		a:link { color: black; text-decoration: none;}
+		a:visited { color: black; text-decoration: none;}
+		a:hover { color: red; text-decoration: none; text-decoration: underline; cursor:pointer;}
 		nav {
 		  float: left;
 		  width: 200px;
@@ -17,7 +52,7 @@
 		.container 
 		{
 			position: relative;
-			width: 800px;
+			width: 1200px;
   			margin: 0 auto;
 		    min-width: 400px;
 		    overflow: auto;
@@ -31,8 +66,7 @@
 		}
 		th,td {
 			padding-right: 10px;
-		    padding-left: 10px;
-		    text-align: center;
+		    padding-left: 10px;		    
 		}
 		.nave{margin: 0px 0x 10px 0px;}
 		section{
@@ -44,6 +78,7 @@
 		#info-data
 		{
 			border:1px solid red; 
+			text-align: center;
 		}
 		#category
 		{
@@ -55,11 +90,11 @@
 		<nav>
 			<section id="info-data">
 				<p>여우별<br>(yeoubyeol98)</p>
-				<p><button>글쓰기</button></p>
+				<p><button onclick="moveWrite()">글쓰기</button></p>
 			</section>
 			<section id="category">
 				<ul>
-					<li>전체글보기</li>
+					<li><a href="/board/list.do">전체글보기</a></li>
 					<li>프로그래밍</li>
 					<li>일상</li>
 					<li>뉴스</li>
@@ -68,78 +103,18 @@
 			</section>
 		</nav>
 		<section id="main" class="elem-blue">
-			<p>전체글보기</p>
-			<table BORDER=1 WIDTH="100%">
-			  <tr>
-			    <th>번호</th>
-			    <th>제목</th>
-			    <th>작성자</th>
-			    <th>작성일</th>
-			    <th>조회</th>
-			  </tr>
-			  <tr>
-			    <td>1</td>
-			    <td><a href="/board/list.do">안녕하세요^^</a></td>
-			    <td>여우별</td>
-			    <td>2017.02.28</td>
-			    <td>13</td>
-			  </tr>
-			  <tr>
-			    <td>2</td>
-			    <td><a href="/board/list.do">오늘의 진행사항입니다.</a></td>
-			    <td>여우별</td>
-			    <td>2017.03.01</td>
-			    <td>7</td>
-			  </tr>
-			  <tr>
-			    <td>3</td>
-			    <td><a href="/board/list.do">한번 추가해 보았습니다.</a></td>
-			    <td>여우별</td>
-			    <td>2017.03.02</td>
-			    <td>8</td>
-			  </tr>
-			  <tr>
-			    <td>4</td>
-			    <td><a href="/board/list.do">심심하다 ㅠㅠ</a></td>
-			    <td>여우별</td>
-			    <td>2017.03.02</td>
-			    <td>22</td>
-			  </tr>
-			  <tr>
-			    <td>5</td>
-			    <td><a href="/board/list.do">오늘의 점심메뉴는?</a></td>
-			    <td>여우별</td>
-			    <td>2017.03.02</td>
-			    <td>30</td>
-			  </tr> 
-			  <tr>
-			    <td>6</td>
-			    <td><a href="/board/list.do">예의상 넣어보았습니다.</a></td>
-			    <td>여우별</td>
-			    <td>2017.03.02</td>
-			    <td>1</td>
-			  </tr> 
-			  <tr>
-			    <td>7</td>
-			    <td><a href="/board/list.do">아침에 밥 안먹으면 손떨리네</a></td>
-			    <td>여우별</td>
-			    <td>2017.03.02</td>
-			    <td>22</td>
-			  </tr> 
-			  <tr>
-			    <td>8</td>
-			    <td><a href="/board/list.do">진짜 할거 없다</a></td>
-			    <td>여우별</td>
-			    <td>2017.03.02</td>
-			    <td>5</td>
-			  </tr> 
-			  <tr>
-			    <td>9</td>
-			    <td><a href="/board/list.do">1년 내내 쉬고싶다</a></td>
-			    <td>여우별</td>
-			    <td>2017.03.02</td>
-			    <td>99</td>
-			  </tr> 
+			<h2>전체글보기</h2>
+			<table WIDTH="100%">
+				<tbody id="listView">
+				  <tr bgcolor='#aaaaaa'><td colspan='5'></td></tr>
+				  <tr>
+				    <th style="text-align: center;">번호</th>
+				    <th style="text-align: center;">제목</th>
+				    <th style="text-align: left;">작성자</th>
+				    <th style="text-align: center;">작성일</th>
+				    <th style="text-align: center;">조회</th>
+				  </tr>
+			  </tbody>
 			</table>
 			<br>
 			<input type="text" id="name">

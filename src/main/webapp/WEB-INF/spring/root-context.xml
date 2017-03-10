@@ -4,5 +4,27 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/noticeboard"/>
+		<property name="username" value="root"/>
+		<property name="password" value="1234"/>	
+	</bean>	
+	
+	 <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- mybatis 세션생성시 사용할 dataSource주입 -->
+        <property name="dataSource" ref="dataSource" />
+        <!-- mybatis 세션생성후 쿼리를 실행시킬때 사용할 쿼리위치(메퍼)설정 -->
+        <property name="mapperLocations">
+            <list>
+                <value>classpath:sql.xml</value>
+            </list>
+        </property>
+    </bean>
+	
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory"/>
+	</bean>	
 		
 </beans>

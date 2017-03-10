@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="sql">
+	
+	<select id="select" parameterType="hashmap" resultType="hashmap">
+		SELECT id,title,user_id,views,date_format(reg_date,'%Y-%m-%d') reg_date FROM tb_table;
+	</select>
+	
+	<select id="textView" parameterType="hashmap" resultType="hashmap">
+		SELECT title,text,user_id FROM tb_table WHERE id=#{id};
+	</select>
+	
+	<select id="insert" parameterType="hashmap">
+		INSERT INTO tb_table(title,text,user_id) VALUES(#{title},#{text},#{user_id});
+	</select>
+	  
+</mapper>
